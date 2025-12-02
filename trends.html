@@ -1,0 +1,139 @@
+<!-- trends.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Crystal Cascade — Trends</title>
+
+  <!-- Font Awesome (same as your gallery) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Header (same nav structure used in gallery) -->
+  
+   <header>
+        <h1><i class="fas fa-gem"></i> Crystal Cascade</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="trends.html" class="active">Trends</a>
+            <a href="care.html">Jewellery Care</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button id="dark-mode-toggle">🌙</button>
+    </header>
+
+  <h2 class="section-title">Current Trends</h2>
+
+  <!-- Quick filter / intro -->
+  <p style="text-align:center; max-width:800px; margin:0 auto 1.5rem;">
+    Hand-picked trend categories showing popular pieces and styling ideas — inspired by the gallery layout. Click any
+    trend to jump to its examples.
+  </p>
+
+  <!-- Trend anchors -->
+  <section id="minimal" class="fade-in" style="padding:1rem 2rem;">
+    <h3 style="margin-bottom:.6rem;">Minimal</h3>
+    <p class="lead" style="max-width:900px;">
+      Clean lines, small pendants and stackable rings — perfect for everyday elegance.
+    </p>
+
+    <div class="grid">
+      <div class="item"><img src="minimal pendant.jpg" alt="Minimal pendant">
+        <h3>Fine Bar Pendant</h3>
+        <p>₹799</p>
+      </div>
+      <div class="item"><img src="stack rings.jpg" alt="Thin stacking rings">
+        <h3>Stacking Rings</h3>
+        <p>₹399</p>
+      </div>
+      <div class="item"><img src="delicate studs.jpg" alt="Delicate studs">
+        <h3>Delicate Studs</h3>
+        <p>₹299</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="oxidized" class="fade-in" style="padding:1rem 2rem;">
+    <h3 style="margin-bottom:.6rem;">Oxidized</h3>
+    <p class="lead" style="max-width:900px;">
+      Bold textures and antique finishes for a rustic, statement look.
+    </p>
+
+    <div class="grid">
+      <div class="item"><img src="oxidized jhumka.jpg" alt="Oxidized jhumka">
+        <h3>Oxidized Jhumka</h3>
+        <p>₹1,199</p>
+      </div>
+      <div class="item"><img src="oxidized neckalce.jpg" alt="Oxidized necklace">
+        <h3>Layered Oxidized Chain</h3>
+        <p>₹1,499</p>
+      </div>
+      <div class="item"><img src="oxidized bracelet.jpg" alt="Oxidized bracelet">
+        <h3>Textured Kada</h3>
+        <p>₹999</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="statement" class="fade-in" style="padding:1rem 2rem;">
+    <h3 style="margin-bottom:.6rem;">Statement</h3>
+    <p class="lead" style="max-width:900px;">Oversized and attention-grabbing — perfect for special occasions.</p>
+
+    <div class="grid">
+      <div class="item"><img src="statement.jpeg" alt="Statement necklace">
+        <h3>Bold Bib Necklace</h3>
+        <p>₹3,999</p>
+      </div>
+      <div class="item"><img src="cuff.jpeg" alt="Cuff bracelet">
+        <h3>Gemstone Cuff</h3>
+        <p>₹2,499</p>
+      </div>
+      <div class="item"><img src="chandeliar.jpg" alt="Chandelier earrings">
+        <h3>Chandelier Earrings</h3>
+        <p>₹2,199</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="vintage" class="fade-in" style="padding:1rem 2rem 4rem;">
+    <h3 style="margin-bottom:.6rem;">Vintage Revival</h3>
+    <p class="lead" style="max-width:900px;">Heirloom aesthetics and classic cuts brought back with modern finishing.
+    </p>
+
+    <div class="grid">
+      <div class="item"><img src="brooch.jpg" alt="Vintage brooch">
+        <h3>Antique Brooch</h3>
+        <p>₹2,899</p>
+      </div>
+      <div class="item"><img src="pearl collar.jpg" alt="Pearl collar">
+        <h3>Pearl Collar</h3>
+        <p>₹3,299</p>
+      </div>
+      <div class="item"><img src="filigree.jpeg" alt="Filigree ring">
+        <h3>Filigree Ring</h3>
+        <p>₹1,799</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Crystal Cascade | All Rights Reserved</p>
+    <div class="social">
+      <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <script src="script1.js"></script>
+</body>
+
+</html>

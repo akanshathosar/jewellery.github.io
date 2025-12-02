@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jewellery Designs Portal</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font + Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="bg-light shadow-sm">
+    <nav class="navbar navbar-expand-lg container">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="fas fa-gem"></i> Crystal Cascade
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="trends.html">Trends</a></li>
+          <li class="nav-item"><a class="nav-link" href="care.html">Jewellery Care</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <button id="dark-mode-toggle" class="btn btn-outline-dark ms-3">
+        <i class="fas fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div id="home" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="bg.jpg" alt="bg" class="bd-placeholder-img " height="100%" width="100%">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Discover Timeless Jewellery</h1>
+            <p class="opacity-75">Explore our unique designs crafted with precision and style.</p>
+            <p><a class="btn btn-lg btn-primary" href="#gallery">View Gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="fade-in py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Designs</h2>
+
+    <div class="text-center mb-4">
+      <button class="btn btn-dark filter-btn active" data-category="all">All</button>
+      <button class="btn btn-outline-dark filter-btn" data-category="men">Men</button>
+      <button class="btn btn-outline-dark filter-btn" data-category="women">Women</button>
+      <button class="btn btn-outline-dark filter-btn" data-category="children">Children</button>
+    </div>
+
+    <div class="row g-4" id="design-grid">
+
+      <!-- MEN -->
+      <div class="col-md-3 item" data-category="men">
+        <div class="card shadow-sm">
+          <img src="gold ring.jpg" class="card-img-top" alt="Gold Ring">
+          <div class="card-body text-center">
+            <h5 class="card-title">Gold Ring</h5>
+            <p class="card-text">$299</p>
+            <button class="btn btn-primary view-btn">View</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 item" data-category="men">
+        <div class="card shadow-sm">
+          <img src="silver.jpg" class="card-img-top" alt="Silver Ring">
+          <div class="card-body text-center">
+            <h5 class="card-title">Silver Ring</h5>
+            <p class="card-text">$199</p>
+            <button class="btn btn-primary view-btn">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- WOMEN -->
+      <div class="col-md-3 item" data-category="women">
+        <div class="card shadow-sm">
+          <img src="diamond necklace.jpg" class="card-img-top" alt="Diamond Necklace">
+          <div class="card-body text-center">
+            <h5 class="card-title">Diamond Necklace</h5>
+            <p class="card-text">$499</p>
+            <button class="btn btn-primary view-btn">View</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 item" data-category="women">
+        <div class="card shadow-sm">
+          <img src="pearl.jpg" class="card-img-top" alt="Pearl Necklace">
+          <div class="card-body text-center">
+            <h5 class="card-title">Pearl Necklace</h5>
+            <p class="card-text">$399</p>
+            <button class="btn btn-primary view-btn">View</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 item" data-category="women">
+        <div class="card shadow-sm">
+          <img src="body (1).jpg" class="card-img-top" alt="Body Jewellery">
+          <div class="card-body text-center">
+            <h5 class="card-title">Body Jewellery</h5>
+            <p class="card-text">$249</p>
+            <button class="btn btn-primary view-btn">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHILDREN -->
+      <div class="col-md-3 item" data-category="children">
+        <div class="card shadow-sm">
+          <img src="/gold.jpg" class="card-img-top" alt="Gold Earrings">
+          <div class="card-body text-center">
+            <h5 class="card-title">Gold Earrings</h5>
+            <p class="card-text">$249</p>
+            <button class="btn btn-primary view-btn">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- OPTIONAL — your other random categories -->
+      <div class="col-md-3 item" data-category="others">
+        <div class="card shadow-sm">
+          <img src="bracelet.jpg" class="card-img-top" alt="Bracelets">
+          <div class="card-body text-center">
+            <h5 class="card-title">Bracelets</h5>
+            <p class="card-text">$249</p>
+            <button class="btn btn-primary view-btn">View</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 item" data-category="others">
+        <div class="card shadow-sm">
+          <img src="/pins.jpg" class="card-img-top" alt="Broches and Pins">
+          <div class="card-body text-center">
+            <h5 class="card-title">Broches and Pins</h5>
+            <p class="card-text">$249</p>
+            <button class="btn btn-primary view-btn">View</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- About Section -->
+  <section id="about" class="fade-in py-5 container">
+    <h2 class="text-center mb-3">About Us</h2>
+    <p class="text-center">We specialize in bespoke jewellery designs, blending tradition with modern trends. Each piece
+      is handcrafted
+      for elegance and uniqueness.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-3 bg-dark text-white">
+    <p>&copy; 2023 Jewellery Designs. All rights reserved.</p>
+    <div>
+      <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="caption"></div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

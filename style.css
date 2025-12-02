@@ -1,0 +1,305 @@
+/* ---------- GLOBAL ---------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+  color: #f5f5f5;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background: linear-gradient(90deg, #D4AF37 0%, #FFD700 100%);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #FFD700;
+}
+
+#dark-mode-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ---------- HERO SECTION (updated with background image) ---------- */
+.hero-section {
+  background-image: linear-gradient(135deg, rgba(212,175,55,0.6) 0%, rgba(255,215,0,0.6) 1000%),
+                    url("background.png"); /* <-- Change path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500%;
+  width: 700%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: #f0f0f0;
+  background-attachment: fixed;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero-content h2,
+.hero-content p {
+  animation: fadeInUp 1s ease-out;
+}
+
+.cta-btn {
+  background: #FFD700;
+  color: #333;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- GRID DESIGNS ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.item {
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body.dark .item {
+  background: rgba(50,50,50,0.9);
+}
+
+.item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.view-btn {
+  background: linear-gradient(90deg, #D4AF37, #FFD700);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.3s;
+}
+
+.view-btn:hover {
+  background: linear-gradient(90deg, #FFD700, #D4AF37);
+}
+
+/* ---------- FILTER BUTTONS ---------- */
+.filter {
+  text-align: center;
+  margin: 1rem;
+}
+
+.filter-btn {
+  margin: 0 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #C0C0C0;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filter-btn.active {
+  background: #D4AF37;
+  color: white;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #000;
+  color: white;
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #FFD700;
+}
+
+/* ---------- LIGHTBOX ---------- */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ---------- ANIMATIONS ---------- */
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-section {
+    height: auto;
+    padding: 4rem 1rem;
+  }
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+}
+
+/* Dropdown hidden by default */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 2.5rem;
+  background: white;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  min-width: 140px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.dropdown-menu li {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* Hover to show dropdown */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Hover effect */
+.dropdown-menu a:hover {
+  background: hsl(212, 100%, 50%);
+  color: #000;
+}
+
+/* Dark mode */
+body.dark .dropdown-menu {
+  background: #222;
+}
+body.dark .dropdown-menu a {
+  color: white;
+}
+body.dark .dropdown-menu a:hover {
+  background: #D4AF37;
+  color: white;
+}

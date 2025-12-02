@@ -1,0 +1,85 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Crystal Cascade — Contact</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-gem"></i> Crystal Cascade</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="trends.html">Trends</a>
+      <a href="care.html">Jewellery Care</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <button id="dark-mode-toggle">🌙</button>
+  </header>
+
+  <h2 class="section-title">Get In Touch</h2>
+
+  <div style="max-width:1000px; margin:0 auto 2rem; display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; padding:0 1rem;">
+    <!-- Contact info -->
+    <div class="item" style="display:flex; flex-direction:column; gap:.8rem;">
+      <h3>Visit / Call</h3>
+      <p><strong>Address:</strong> CSMT Vidya Nagari, Kalina, Santacruz East, Mumbai, Maharashtra 400098</p>
+      <p><strong>Phone:</strong> +91 98X XXY ZZZZ</p>
+      <p><strong>Email:</strong> hello@crystalcascade.example</p>
+
+      <h4>Opening Hours</h4>
+      <p>Mon — Sat: 10:00 AM — 7:00 PM<br>Sun: Closed</p>
+
+      <h4>Social</h4>
+      <div class="social">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <!-- Contact form (non-functional: posts to #) -->
+    <div class="item">
+      <h3>Send a Message</h3>
+      <form id="contact-form" action="#" onsubmit="alert('Form submission demo — wire up your backend or email service'); return false;">
+        <label style="display:block; margin-top:.6rem;">Name</label>
+        <input type="text" name="name" required style="width:100%; padding:.6rem; border-radius:8px; border:1px solid #ddd;">
+        <label style="display:block; margin-top:.6rem;">Email</label>
+        <input type="email" name="email" required style="width:100%; padding:.6rem; border-radius:8px; border:1px solid #ddd;">
+        <label style="display:block; margin-top:.6rem;">Message</label>
+        <textarea name="message" rows="6" required style="width:100%; padding:.6rem; border-radius:8px; border:1px solid #ddd;"></textarea>
+        <button type="submit" class="cta-btn" style="margin-top:.8rem;">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Optional: embed a map (replace src with your Google Maps embed) -->
+  <div style="max-width:1100px; margin:0 auto 3rem; padding:0 1rem;">
+    <div class="item">
+      <h4>Find Us</h4>
+      <!-- placeholder map iframe; replace URL with your Google Maps embed URL -->
+      <iframe
+        title="location"
+        src="https://www.google.com/maps?q=CSMT%20Vidya%20Nagari%2C%20Kalina%2C%20Santacruz%20East%2C%20Mumbai&amp;output=embed"
+        style="width:100%; height:320px; border:0; border-radius:8px;"
+        loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Crystal Cascade | All Rights Reserved</p>
+    <div class="social">
+      <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <script src="script1.js"></script>
+</body>
+</html>
