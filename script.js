@@ -38,3 +38,4 @@ document.addEventListener('DOMContentLoaded', () => {
     lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.style.display = 'none'; });
 });
 
+
